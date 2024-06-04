@@ -1,4 +1,10 @@
-.nav-a {
+.nav-li {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.navA {
     color: white;
     font-weight: 700;
     text-align: center;
@@ -7,8 +13,8 @@
     width: 150px;
     padding: 5px 0;
     font-size: 14px;
-  }
-  
-  .nav-a:hover {
+}
+
+.navA:hover {
     text-decoration: underline;
-  }
+}

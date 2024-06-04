@@ -1,6 +1,7 @@
+/* HERO SECTION */
 .hero-section {
     height: 200px;
-    background: url("/hero_bg.png");
+    background: url("../public/hero_bg.png");
     background-size: cover;
     background-position: top center;
     display: flex;
@@ -20,7 +21,7 @@
     font-size: 20px;
 }
 
-.hero-title span:last-child {
+.heroTitle span:last-child {
     font-size: 50px;
     line-height: 30px;
 }
@@ -28,4 +29,27 @@
 .hero-span {
     color: white;
     font-weight: 700;
+}
+
+@media (min-width:680px) {
+
+    .carousel-item img,
+    #hero {
+        height: 210px;
+    }
+
+    .hero-title span:first-child {
+        font-size: 40px;
+    }
+
+    .hero-title span:last-child {
+        font-size: 100px;
+        line-height: 80px;
+    }
+}
+
+@media (min-width:1080px) {
+    .carousel-item img {
+        object-fit: contain;
+    }
 }
