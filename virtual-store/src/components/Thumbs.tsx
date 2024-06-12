@@ -1,26 +1,28 @@
-import styles from "./Thumbs.module.css";
+import { useEffect, useState } from "react";
+// import styles from "./Thumbs.module.css";
 
-function Thumbs({ product }) {
+export default function Thumbnail({ product }) {
+  const [thumb, setThumb] = useState(product.images[0] || "/mock1.jpg");
+  useEffect(() => setThumb(product.images[0]),[product.id]);
   return (
-    <section className={styles["product-images-block"]}>
-      <div className={styles["product-images"]}>
-        {product.images.map((each, index) => (
+    <section className="w-[300px] p-[10px] m-[10px] flex sm:w-[340px]">
+      <div className="w-[40px] mx-[10px]">
+        {product.images.map((each) => (
           <img
-            key={index}
-            className={styles["mini-img"]}
+            className="w-[40px] h-[30px] mb-[10px] object-cover"
+            key={each}
             src={each}
             alt={product.title}
-          ></img>
+            onClick={() => setThumb(each)}
+          />
         ))}
       </div>
       <img
-        className={styles["big-img"]}
+        className= "w-[220px] h-[220px] object-cover                    sm:w-[280px] sm:h-[280px]"
         id="big-img"
-        src={product.images[0]}
-        alt="MacBook Pro 13'4"
-      ></img>
+        src={thumb}
+        alt={product.title}
+      />
     </section>
   );
 }
-
-export default Thumbs;

@@ -1,12 +1,17 @@
-import styles from './NavButton.module.css'
-import { Link } from 'react-router-dom';
+// import styles from "./NavButton.module.css";
 
-function NavButton ({title, link}){
-    return (
-        <li className={styles["nav-li"]}>
-          <Link className={styles.navA} to={`${link}`}>{title}</Link>
-        </li>
-    )
+export default function NavBar({ title, link }) {
+  return (
+    <>
+      <li className="list-none">
+        <a className=" text-white font-bold  text-center no-underline w-[150px] py-[4px] px-[6px] text-[10px]
+                      sm:text-[12px]
+                      md:text-[14px]
+                      hover:underline  " 
+          href={link}>
+          {title}
+        </a>
+      </li>
+    </>
+  );
 }
-
-export default NavButton

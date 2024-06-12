@@ -7,14 +7,14 @@ function Cart() {
   return (
     <>
       <NavBar />
-      <Hero firstText={"mi"}  secondText={"carrito"}/>
+      <Hero first="mi" second="carrito" />
       <main>
         <article className={styles["product-cart"]}>
           <img
             className={styles["product-img"]}
             src="https://i.postimg.cc/kX8PKZpq/ipad.jpg"
             alt="ipad"
-          ></img>
+          />
           <div className={styles["product-details"]}>
             <strong className={styles["product-title"]}>iPad Pro 13</strong>
             <span className={styles["product-description"]}>- Silver</span>
@@ -34,10 +34,10 @@ function Cart() {
               className={styles["product-input"]}
               type="number"
               name="quantity"
-              value="1"
+              defaultValue="1"
               min="1"
               id="P7Q8R90"
-            ></input>
+            />
           </div>
           <strong className={styles["price"]}>AR$ $800000</strong>
         </article>

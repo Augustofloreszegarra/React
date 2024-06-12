@@ -5,20 +5,16 @@ import NotFound from "./views/NotFound";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
-
   const browserRouter = createBrowserRouter([
     { path: "/", element: <Home /> },
     { path: "/cart", element: <Cart /> },
     { path: "/details/:id", element: <Details /> },
-    { path: "/*", element: <NotFound /> }
+    { path: "/*", element: <NotFound /> },
   ]);
-
-
   return (
     <>
       <RouterProvider router={browserRouter} />
     </>
-  )
+  );
 }
-
-export default App
+export default App;
